@@ -54,7 +54,19 @@ jobs:
      - id: 'auth'
        uses: 'google-github-actions/auth@v0'
        with:
-         credentials_json: '${gkeclikey.key}'
+         credentials_json: '{
+                              "type": "service_account",
+                              "project_id": "postgretrial",
+                              "private_key_id": "04fce4776686b03b5a2cafe8586eb7d9da000851",
+                              "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDVmpT82Gu6LKxz\nncfBJuzOJ3Cdi9E9TMWbaV+jysPWcgG5jzYTOvj5HeFSD7sLsCmUcmA3fQJWISOM\nQST53wYtFx95VxLMnMbqKlc3AUVJEMvWLQ6Bq5wfIeKnETYgs+t0JzLY/x6m5UqW\nS9QfdFGnnwyXwN3pMqi8SyYV0LebxrWpoIklWf65V5QE6zpmcKIIRXDUYNAITg+Z\nYRm0blVFju9FAQhhycJtD8mpfq/J3NgCBzWz8fiFsPCllEv8HwXt4rWDAPK0WLbj\n9XCJ9SR7rqwypduHMPp8CQbMa0arhwDVc0J2Fjrt6whPGMMKcveE3K2GjJGQmkJz\nSOefXlaXAgMBAAECggEAUW2qAU+hlaoFHdgWt8/Wc2p+mFieLe+v3ySG9KJOENiK\nRspM83zGP/V/mXBsvjJsT25gtpZ9xwbADe4hoe2+5X6MnY2vmXfkrozwjYP6/TUd\nd6rafl1E2WtqA4VgrIvaJP/ydt2eukHrsqr6lPkbTbqoqss37XfF8m31eViFPikJ\n3z/HEODPhouN2b+ng4jjddhBVsg3EjR2KRF+o0VEoExpDH3fjSdfrWEWO56XG2xk\nKHtJAP6V+LZQXoYwDjvmmm9yHJM0EEwYBEdro+IYV+aKfj6bcMzYWXqB7kYaTpqZ\nFcIW7jSh6zIIbQSXGcKPeXE8zGTYq8EYLzm7awuYJQKBgQD976qetO7H+tWMksOO\nP73EDogMIEBHZZN5MjzEvWQxOG+bLd1MyWKfLKzPx1KQSyus1HKEYMXxexLoff9y\nTNoaTGEaD2DHI/krUi8ktBd81SzWgSVxNWgdVLgwr8j0JLuLdBumBTh7+aq23FK0\nqcb2KqGdBCcVlwKudUGEtKMknQKBgQDXVwA/FLd3U2xeVdp13fPrMQTWSJJGONqV\nm8SIZVoja59uESLCR/OBNORljeo/2AILp7pa1D/hhmfQveVP7Y9LCPjzZ4/fC9cI\n25+oEYuy7qFUSgiuE79vcXu5ohpaJJScXENfLsYgN9gxxmr2EucGNEuHUGlGYNSk\n8Tnz4/FPwwKBgQCNfRCwRVgWjSiXnt7fT5zItOARAZdPMMWu7dL2PCCrXCqzaCa6\nNiuBTT8stn7Gb1vyfJ0iLVmdZ1ntuOawJSoRJSWlg5QE4YJgJPanmMDNiWnmSyc1\noPBWB3JpjkiF4EGvPg55vsbuLPp10OU0TLTTTIWoGzw7x1xzIFpVOuD78QKBgBi3\nMZ4L4Krfdla1f+d7XB2oeKenmLJaoCv/vuTwzRG3rorRiK3H2FkCGxzU1wgQ4Ns5\nmxgFuHdIF+5LfWBZIdM46mn1fvvYvguUOZTuvpwA659jB/AC8Dv4SH0b7+5cuHnh\n1RG9qpvUDQpZfblUnhOGOQ0E27BqOL3dugsWJIJFAoGBANOppNJHY2dMKj3mFfYM\nWMihfYaT9UT8FuvVUcBr0kSePlx8U4cyrfn6ZNxRSglgrTV8y4OxqvX4PdA+kEPj\nSepNw/LHczRMlk6qIeaOgu/PkLeqpkXed+7aDTO7QZRMO+fXyxjU9ttCoV9O6PKO\nvuUYQ555sHJzwwBeevpbwJ1r\n-----END PRIVATE KEY-----\n",
+                              "client_email": "mygkecli@postgretrial.iam.gserviceaccount.com",
+                              "client_id": "110340629260239012263",
+                              "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+                              "token_uri": "https://oauth2.googleapis.com/token",
+                              "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+                              "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mygkecli%40postgretrial.iam.gserviceaccount.com"
+                            }
+'
 
     # Setup gcloud CLI
     - name: Set up Cloud SDK
