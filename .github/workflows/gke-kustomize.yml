@@ -29,7 +29,7 @@ env:
   IMAGE: static-site
 
 jobs:
-  setup-build-publish-deploy:
+  build:
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
 
