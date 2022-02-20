@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: gke-test
-        image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
+        image: uscentral1-docker.pkg.dev/postgretrial/click-repo/IMAGE:TAG
         ports:
         - containerPort: 5000
         resources:
